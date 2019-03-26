@@ -27,7 +27,7 @@ export default class VisualizerPlugin {
                 <script>${jsString}</script>
             `;
 
-            let outputFile = path.join(compilation.outputOptions.path, this.opts.filename);
+            let outputFile = path.resolve(compilation.outputOptions.path, this.opts.filename);
 
             mkdirp(path.dirname(outputFile), (mkdirpErr) => {
                 if (mkdirpErr) {
