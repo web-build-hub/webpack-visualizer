@@ -13,7 +13,7 @@ export default class VisualizerPlugin {
     }
 
     apply(compiler) {
-        compiler.plugin('emit', (compilation, callback) => {
+        compiler.hooks.emit.tap('webpack-visualizer', (compilation) => {
             let stats = compilation.getStats().toJson({chunkModules: true});
             let stringifiedStats = JSON.stringify(stats);
             stringifiedStats = stringifiedStats.replace(/</g, '&lt;').replace(/</g, '&gt;');
@@ -39,7 +39,6 @@ export default class VisualizerPlugin {
                         console.log('webpack-visualizer-plugin: error writing stats file');
                     }
 
-                    callback();
                 });
             });
         });

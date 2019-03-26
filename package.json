@@ -1,6 +1,6 @@
 {
-  "name": "webpack-visualizer-plugin",
-  "version": "0.1.11",
+  "name": "visualizer-webpack-plugin",
+  "version": "0.1.12",
   "main": "lib/plugin.js",
   "author": "Chris Bateman (http://cbateman.com/)",
   "license": "MIT",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:chrisbateman/webpack-visualizer.git"
+    "url": "https://github.com/web-build-hub/webpack-visualizer.git"
   },
   "scripts": {
     "build": "npm run buildsite && npm run buildplugin",
